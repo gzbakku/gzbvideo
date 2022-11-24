@@ -23,5 +23,5 @@
     "type": "git",
     "url": "git+https://github.com/gzbakku/gzbvideo.git"
   },
-  "preferGlobal": true,
+  "preferGlobal": true
 }
