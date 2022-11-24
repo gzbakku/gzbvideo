@@ -1,12 +1,12 @@
 {
   "name": "gzbvideo",
   "version": "1.0.0",
-  "description": "",
+  "description": "this is a simple cli tools to work with videos.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["video editor","youtube","download","cli","cut","video"],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -18,6 +18,10 @@
   },
   "bin": {
     "gzbvideo": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gzbakku/gzbvideo.git"
   },
   "preferGlobal": true,
 }
