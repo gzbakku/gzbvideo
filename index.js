@@ -21,7 +21,7 @@ async function main(){
         func = work[2];
     }
     let base = [
-        "extract_audio","cut","youtube_download"
+        "extract_audio","cut","youtube_download","convert"
     ];
     if(base.indexOf(func) < 0){
         func = await input.select("please select a option",base);
@@ -31,7 +31,8 @@ async function main(){
 
     if(func === "cut"){engine.cut.init(work);} else
     if(func === "extract_audio"){engine.extract_audio.init(work);} else
-    if(func === "youtube_download"){engine.youtube_download.init(work);} 
+    if(func === "youtube_download"){engine.youtube_download.init(work);} else
+    if(func === "convert"){engine.convert.init(work);}
     else {console.error("!!! invalid option");}
 
 }
