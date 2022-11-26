@@ -23,11 +23,17 @@ async function init(work){
     let sec = end.sec - start.sec;
     let total_time = `${hour}:${min}:${sec}`;
 
-    let inputFile = await engine.common.string(
+    let inputFile = await engine.common.file(
         await engine.common.get_var(work,"input"),
-        "input file name"
+        "please select input file"
     );
+
     let dir;
+    if(typeof(inputFile) === "object"){
+        dir = inputFile.dir;
+        inputFile = inputFile.filename;
+    }
+
     if(!inputFile){
         let hold = await fsys.browse_files("please select input file");
         dir = hold.dir;

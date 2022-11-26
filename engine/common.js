@@ -4,7 +4,8 @@ module.exports = {
     time:time,
     get_var:get_var,
     string:string,
-    number:number
+    number:number,
+    file:file
 };
 
 async function get_var(input,name){
@@ -35,6 +36,16 @@ async function string(take,message){
         return string(take,message);
     } else {
         return take;
+    }
+
+}
+
+async function file(take,message){
+
+    if(typeof(take) == "string" && take.length > 0){
+        return take;
+    } else {
+        return await fsys.browse_files(message);
     }
 
 }
