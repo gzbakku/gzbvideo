@@ -1,6 +1,6 @@
 {
   "name": "gzbvideo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is a simple cli tools to work with videos.",
   "main": "index.js",
   "scripts": {
